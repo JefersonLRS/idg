@@ -4,10 +4,39 @@ import faixaIcon from '../assets/images/faixaIcone.svg'
 import hackIcon from '../assets/images/hackIcone.svg'
 import faixaPretaButton from '../assets/images/faixaPretaButton.png'
 
+import { useState, useEffect } from 'react';
+
 export default function ContentSection () {
+
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 540) {
+        setIsMobile(true);
+      } else if (window.innerWidth < 768) {
+        setIsMobile(false);
+        setIsTablet(true);
+      }
+      else {
+        setIsMobile(false);
+        setIsTablet(false);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, [isMobile, isTablet]);
+
     return (
-    <div className='flex flex-col lg:max-w-[1300px] mx-auto justify-center mt-[500px] md:mt-[350px] lg:mt-[200px] mb-[40px] lg:mb-[200px]'>
-        <h1 className='text-white font-bold text-3xl px-7 md:px-0 text-center'>O QUE VOCÊ VERÁ NO DIA <span className='text-[#FDE936]'>18 DE ABRIL:</span></h1>
+    <div className={`${!isMobile && !isTablet ? 'flex flex-col lg:max-w-[1300px] mx-auto justify-center mt-[500px] md:mt-[350px] lg:mt-[200px] mb-[40px] lg:mb-[200px]' 
+    : isMobile ? 'flex flex-col mx-auto justify-center mt-[600px]' 
+    : 'flex flex-col mx-auto justify-center mt-[650px]'}`}>
+        <h1 className='text-white font-bold text-3xl lg:text-5xl px-7 md:px-0 text-center'>O QUE VOCÊ VERÁ NO DIA <span className='text-[#FDE936]'>18 DE ABRIL:</span></h1>
         <div className='mt-[80px] lg:mt-[150px] mx-auto grid gap-[50px] grid-cols-1 lg:grid-cols-2'>
             
                 <div className='flex flex-col justify-center items-center gap-4 w-[350px]'>
