@@ -8,6 +8,7 @@ function App() {
     <div className='flex flex-col justify-center'>
       <Introduction/>
       <ContentSection/>
+      
     </div>
   )
 }
