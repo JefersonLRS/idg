@@ -5,7 +5,7 @@ export default function Profile() {
         <div className='flex flex-col lg:max-w-[1300px] md:mx-auto lg:flex-row justify-center items-center
         gap-6 lg:gap-[100px] mb-[30px] md:mb-[100px]'>
         <img src={imagemIrmaos} alt="Imagem dos irmãos Rocha" className='md:w-[550px] lg:w-[400px]'/>
-        <div className='text-white w-[70%] lg:w-[40%] flex flex-col gap-7'>
+        <div className='text-white text-center lg:text-start w-[70%] lg:w-[40%] flex flex-col gap-7'>
           <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold'>Erico e Hugo Rocha</h1>
           <p>Os dois irmãos formaram os <span className='text-[#fde936]'>maiores empreendedores digitais do Brasil</span> e se
           tornaram referência na América Latina quando o assunto é lançamento.</p>
