@@ -8,7 +8,7 @@ import Profile from './components/Profile'
 
 function App() {
   return (
-    <div className='flex flex-col justify-center'>
+    <div className='flex w-full flex-col justify-center'>
       <Introduction/>
       <ContentSection/>
       <Profile/>
