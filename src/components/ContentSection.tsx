@@ -6,8 +6,8 @@ import faixaPretaButton from '../assets/images/faixaPretaButton.png'
 
 export default function ContentSection () {
     return (
-    <div className='flex flex-col mx-auto justify-center mt-[450px] md:mt-[100px] mb-[300px]'>
-        <h1 className='text-white font-bold text-lg md:text-3xl text-center'>O QUE VOCÊ VERÁ NO DIA <span className='text-[#FDE936]'>18 DE ABRIL:</span></h1>
+    <div className='flex flex-col mx-auto justify-center mt-[500px] md:mt-[100px] mb-[40px] md:mb-[150px]'>
+        <h1 className='text-white font-bold text-3xl px-7 md:px-0 text-center'>O QUE VOCÊ VERÁ NO DIA <span className='text-[#FDE936]'>18 DE ABRIL:</span></h1>
         <div className='mt-[80px] md:mt-[150px] mx-auto grid gap-[100px] grid-cols-1 md:grid-cols-2'>
             
                 <div className='flex flex-col justify-center items-center gap-4 w-[350px]'>
@@ -30,7 +30,9 @@ export default function ContentSection () {
             
         </div>
         <div className='p-4 mx-auto mt-[100px] md:w-[577px] flex flex-col'>
-            <button className='bg-[#fde936] md:w-full text-black p-6 font-black mt-3'>QUERO PARTICIPAR AO VIVO</button>
+            <button className='bg-[#fde936] md:w-full text-black p-6 font-black mt-3
+            hover:bg-black hover:text-[#fde936] transition duration-500 ease-in-out'
+            >QUERO PARTICIPAR AO VIVO</button>
             <img src={faixaPretaButton} alt="faixa preta"/>    
         </div>
     </div>
